@@ -1,18 +1,15 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
-    height: 768px;
-    width: 768px;
-    border-style: solid;
-    border-color: red;
+    height: 960px;
+    width: 960px;
+    border: 2px solid;
     
 }
 
 .square {
-    height: 48px;
-    width: 48px;
-    background-color: gray;
-    border-style: dotted;
+    height: 6.25%;
+    width: 6.25%;
+    border: 2px solid;
     box-sizing: border-box;
 }

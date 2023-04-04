@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button>New Grid</button>
+    <h1>Etch-A-Sketch</h1>
     <div class="container"></div>
+    <div class="button-container">
+        <button>Resize</button>
+    </div>
 
     <script>
         const container = document.querySelector('.container');
@@ -31,8 +34,17 @@
         });
 
         button.addEventListener('click', function () {
-            let number = prompt("Number of squares per side");
-
+            let number = prompt("Number of squares per side (1-100)");
+            
+            if (number === null) {
+                return;
+            } else if (number > 100) {
+                while (number > 100) {
+                    number = prompt("Number of squares per side (1-100)");
+                    if (number === null) return;
+                }
+            }
+            
             while (container.firstChild) {
                 container.removeChild(container.firstChild);
             }
